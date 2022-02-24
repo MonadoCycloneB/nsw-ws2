@@ -6,21 +6,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="/css-utils/z-index.css" />
+		<link rel="stylesheet" href="/css-utils/margin.css" />
 		<title>Nintendo Switch Sports לנינטנדו סוויץ' – נינטנדו ישראל</title>
 	</head>
 	<body>
-		<div class="hero">
-			<div class="hero-bg z-1">
+		<div class="hero pos-rel">
+			<div class="hero-bg pos-abs abs--full z-1 mb-55">
 				<div class="bg-gradient pos-abs abs--full z-1"></div>
 				<div class="bg-pattern pos-abs abs--full"></div>
 			</div>
-			<picture class="hero-image">
-				<source srcset="/assets//hero_small.jpg" media="(max-width: 768px)" />
-				<img
-					src="/assets//hero_big.jpg"
-					alt="Nintendo Switch Sports לנינטנדו סוויץ' – נינטנדו ישראל"
-				/>
-			</picture>
+			<div class="switch-logo pos-abs abs--left z1">
+				<img src="/assets/switch-logo.jpg" alt="Nintendo Switch" />
+			</div>
+			<div class="hero-content mha-md pos-rel">
+				<picture class="hero-image">
+					<source srcset="/assets//hero_small.jpg" media="(max-width: 768px)" />
+					<img
+						src="/assets//hero_big.jpg"
+						alt="Nintendo Switch Sports לנינטנדו סוויץ' – נינטנדו ישראל"
+					/>
+				</picture>
+				<div class="round-bottom-container pos-abs abs--full-bottom">
+					<img class="round-bottom" src="/assets/round-bottom.svg" />
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

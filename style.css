@@ -42,6 +42,17 @@ div {
 	bottom: 0;
 	left: 0;
 }
+.abs--left {
+	left: 0;
+}
+.abs--right {
+	right: 0;
+}
+.abs--full-bottom {
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
 /* #endregion Positions */
 
 /* #region Backgrounds */
@@ -64,18 +75,29 @@ div {
 .hero {
 	display: flex;
 }
+.hero-bg {
+	bottom: 150px;
+}
+.switch-logo {
+}
+.switch-logo img {
+	width: 20vw;
+	max-width: 100px;
+}
+/* Region: Class .hero-content */
 /* Mobile */
-.hero-image {
+.hero-content {
 	width: 100%;
+	max-width: 100%;
 }
 /* Tablet */
 @media (min-width: 768px) {
-	.hero-image {
+	.hero-content {
 		max-width: 1440px;
-		margin-inline: auto;
 	}
 }
 .hero-image img {
 	width: 100%;
 }
+/* End Region: Class .hero-content */
 /* #endregion Hero */

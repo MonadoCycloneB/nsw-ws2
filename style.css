@@ -3,7 +3,8 @@
 	box-sizing: border-box;
 }
 :root {
-	font-size: 20px;
+	font-weight: 400;
+	font-size: 14px;
 	--regular-font: "Heebo", sans-serif;
 	--heading-font: "Rubik", sans-serif;
 	--text-color: #333333;
@@ -15,16 +16,22 @@
 	--line-teal: #00d9be;
 	--line-blue: #009acf;
 }
+@media (min-width: 768px) {
+	:root {
+		font-size: 20px;
+	}
+}
 body {
 	margin: 0;
 }
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
 	font-family: var(--heading-font);
 	color: var(--primary-color);
+}
+h2 {
+	font-size: 2.5rem;
 }
 div {
 	display: block;
@@ -56,7 +63,7 @@ div {
 /* #endregion Positions */
 
 /* #region Backgrounds */
-.bg-gradient {
+.bg-sports-gradient {
 	background: linear-gradient(
 		130deg,
 		var(--primary-color) 0%,
@@ -78,12 +85,29 @@ div {
 .hero-bg {
 	bottom: 150px;
 }
+.pre-order-button {
+	display: flex;
+}
 .switch-logo {
 }
 .switch-logo img {
 	width: 20vw;
 	max-width: 100px;
 }
+/* #region Buttons */
+.btn-reg {
+	color: var(--primary-color);
+	text-decoration: none;
+	font-family: var(--heading-font);
+	font-weight: 600;
+	font-size: 1.2rem;
+	background: white;
+	padding: 0.6rem 1.5rem;
+	margin: 1rem;
+	border-radius: 100px;
+}
+/* #endregion Buttons */
+
 /* Region: Class .hero-content */
 /* Mobile */
 .hero-content {
@@ -101,3 +125,7 @@ div {
 }
 /* End Region: Class .hero-content */
 /* #endregion Hero */
+
+.h2-block {
+	max-width: 30rem;
+}

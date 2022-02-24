@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+	box-sizing: border-box;
+}
+:root {
+	font-size: 20px;
+	--regular-font: "Heebo", sans-serif;
+	--heading-font: "Rubik", sans-serif;
+	--text-color: #333333;
+	--primary-color: #005ac5;
+	--secondary-color: #00cdc6;
+	--line-pink: #ff75a4;
+	--line-green: #ace846;
+	--line-lightblue: #87aaf5;
+	--line-teal: #00d9be;
+	--line-blue: #009acf;
+}
+body {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading-font);
+	color: var(--primary-color);
+}
+div {
+	display: block;
+}
+/* #region Positions */
+.pos-rel {
+	position: relative;
+}
+.pos-abs {
+	position: absolute;
+}
+.abs--full {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+/* #endregion Positions */
+
+/* #region Backgrounds */
+.bg-gradient {
+	background: linear-gradient(
+		130deg,
+		var(--primary-color) 0%,
+		var(--secondary-color) 100%
+	);
+}
+.bg-pattern {
+	background-image: url("/assets/sports-pattern.png");
+	background-size: 800px auto;
+	background-repeat: repeat;
+}
+
+/* #endregion Backgrounds */
+
+/* #region Hero */
+.hero {
+	display: flex;
+}
+.hero-bg {
+	z-index: -1;
+}
+/* Mobile */
+.hero-image {
+	width: 100%;
+}
+/* Tablet */
+@media (min-width: 768px) {
+	.hero-image {
+		max-width: 1440px;
+		margin-inline: auto;
+	}
+}
+/* #endregion Hero */

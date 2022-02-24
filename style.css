@@ -64,9 +64,6 @@ div {
 .hero {
 	display: flex;
 }
-.hero-bg {
-	z-index: -1;
-}
 /* Mobile */
 .hero-image {
 	width: 100%;
@@ -77,5 +74,8 @@ div {
 		max-width: 1440px;
 		margin-inline: auto;
 	}
+}
+.hero-image img {
+	width: 100%;
 }
 /* #endregion Hero */

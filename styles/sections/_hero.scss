@@ -1,0 +1,60 @@
+@import "../util";
+@import "../blocks";
+
+#hero {
+	.hero {
+		display: flex;
+		position: relative;
+
+		// Background
+		.hero-bg {
+			@include absolutePos(0, 0, 89.09px, 0);
+			z-index: -1;
+
+			// Gradient
+			#gradient {
+				@include absolutePos(0, 0, 0, 0);
+				@include bg-gradient();
+				z-index: -1;
+			}
+			// Pattern
+			#pattern {
+				@include absolutePos(0, 0, 0, 0);
+				@include bg-pattern();
+			}
+		}
+
+		// Switch Logo
+		.switch-logo {
+			@include absolutePos(auto, auto, auto, 0);
+			z-index: 1;
+
+			img {
+				@include setWidth(20vw, 100px);
+			}
+		}
+
+		// Hero Content
+		.hero-content {
+			@include setWidth(100%, 100%);
+			@include breakpoint($breakpoint-tablet) {
+				max-width: 1440px;
+			}
+			margin-inline: auto;
+			position: relative;
+
+			// Pre Order Button
+			.pre-order-button {
+				@include absolutePos(0, 0, 0, 0);
+
+				.button {
+					@include arrowButton(white, $primary-color, $filter-blue);
+				}
+			}
+
+			.round-bottom-container {
+				@include absolutePos(auto, 0, 0, 0);
+			}
+		}
+	}
+}

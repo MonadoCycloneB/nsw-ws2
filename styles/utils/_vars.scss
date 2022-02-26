@@ -1,0 +1,21 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+$regular-font: "Heebo", sans-serif;
+$heading-font: "Rubik", sans-serif;
+$text-color: #333333;
+$primary-color: #005ac5;
+$secondary-color: #00cdc6;
+$line-pink: #ff75a4;
+$line-green: #ace846;
+$line-lightblue: #87aaf5;
+$line-teal: #00d9be;
+$line-blue: #009acf;
+$nintendo-red: #e60012;
+$line-width: 10px;
+
+// Filters
+$filter-blue: invert(19%) sepia(72%) saturate(3133%) hue-rotate(203deg)
+	brightness(101%) contrast(101%);
+$filter-white: invert(100%) sepia(1%) saturate(622%) hue-rotate(157deg)
+	brightness(110%) contrast(97%);

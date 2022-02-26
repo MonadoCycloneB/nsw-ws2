@@ -1,0 +1,16 @@
+@import "../util";
+
+@mixin whiteBlock($borderRadius: 3.5rem) {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	padding: 3rem 1.8rem;
+	border-radius: $borderRadius;
+
+	* {
+		margin-bottom: 1rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+}

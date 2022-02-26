@@ -1,0 +1,10 @@
+@import "../util";
+@import "../blocks";
+
+#league {
+	.container-fluid {
+		@include breakpoint($breakpoint-desktop) {
+			margin-inline: 0;
+		}
+	}
+}

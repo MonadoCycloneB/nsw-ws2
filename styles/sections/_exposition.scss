@@ -1,0 +1,15 @@
+@import "../util";
+@import "../blocks";
+
+#exposition {
+	.container-fluid {
+		@include breakpoint($breakpoint-desktop) {
+			margin-inline: 0;
+		}
+
+		// Line Container
+		> .line-container {
+			margin-top: 30px;
+		}
+	}
+}

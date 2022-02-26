@@ -1,0 +1,42 @@
+@import "../util";
+
+.bluepill-container {
+	overflow: hidden;
+	display: grid;
+	grid-column-gap: 1rem;
+	margin-bottom: 2rem;
+	grid-template-columns: 1fr;
+
+	@include breakpoint($breakpoint-tablet) {
+		grid-template-columns: 1fr 10rem;
+	}
+}
+
+.bluepill {
+	background-color: $primary-color;
+	height: 12rem;
+	border-radius: 500px;
+
+	* {
+		color: white !important;
+	}
+	&-content {
+		@include flexCenter();
+		height: 100%;
+		margin-right: 200px;
+	}
+	&--right {
+		margin-right: -200px;
+	}
+	&--left {
+		margin-left: -200px;
+
+		@include hideOnMobile(block);
+	}
+
+	h2 {
+		margin: auto 3rem auto auto;
+		font-size: 1.5rem;
+		@include setWidth(70%, 350px);
+	}
+}

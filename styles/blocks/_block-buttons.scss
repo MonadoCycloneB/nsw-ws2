@@ -1,0 +1,66 @@
+@import "../util";
+
+@mixin arrowButton($bg: white, $color: $primary-color, $filter: $filter-blue) {
+	// Vars
+	--arrow-margin: -2.25rem;
+	--text-pad: 2.5rem;
+
+	// Main
+	display: inline-flex;
+	margin: 0.75rem;
+	flex-direction: row;
+	text-decoration: none;
+	align-items: stretch;
+
+	div {
+		background-color: #{$bg};
+		border-radius: 500px;
+		transition: 0.2s ease-in-out;
+	}
+
+	// Text
+	.btn-text {
+		color: #{$color};
+		padding: 0.5rem 1.5rem;
+		padding-left: var(--text-pad);
+		font-family: "Rubik";
+		font-weight: 600;
+	}
+
+	// Arrow
+	.btn-arrow {
+		@include flexCenter();
+
+		height: 2.5rem;
+		width: 2.5rem;
+		margin-right: var(--arrow-margin);
+
+		img {
+			height: 1rem;
+			width: 1rem;
+			filter: #{$filter};
+		}
+	}
+
+	// Hover
+	&:hover {
+		a {
+			color: #{$color};
+		}
+
+		--text-pad: 1.5rem;
+		--arrow-margin: 0.25rem;
+	}
+}
+
+.btn-reg {
+	color: var(--primary-color);
+	text-decoration: none;
+	font-family: var(--heading-font);
+	font-weight: 600;
+	font-size: 1.2rem;
+	background: white;
+	padding: 0.6rem 1.5rem;
+	margin: 1rem;
+	border-radius: 100px;
+}

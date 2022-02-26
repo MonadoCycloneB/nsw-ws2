@@ -1,0 +1,81 @@
+@import "../util";
+@import "../blocks";
+
+#pre-order {
+	> .pos-rel {
+		padding-bottom: 50px;
+	}
+	// BG
+	.bg-div {
+		@include absolutePos(0, 0, 0, 0);
+		z-index: -1;
+
+		// Gradient
+		.gradient {
+			@include absolutePos(0, 0, 0, 0);
+			z-index: -1;
+			@include bg-gradient();
+		}
+
+		// Pattern
+		.pattern {
+			@include absolutePos(0, 0, 0, 0);
+			@include bg-pattern();
+		}
+	}
+
+	.container-fluid {
+		padding: 3rem;
+
+		// Heading
+		.heading {
+			@include linedHeading(white);
+			* {
+				color: white;
+			}
+		}
+
+		// Release Date
+		.capsule {
+			margin-block: 3rem;
+			@include flexCenter();
+
+			span {
+				font-weight: 600;
+				padding: 0.35rem 2.5rem;
+				background-color: $line-teal;
+				border-radius: 500px;
+			}
+		}
+
+		// Versions
+		.versions {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-row-gap: 2rem;
+
+			.white-block {
+				@include whiteBlock(1.5rem);
+				padding: 1rem;
+				margin-bottom: 0;
+
+				h3 {
+					color: $primary-color;
+					font-size: 1.5rem;
+				}
+
+				.price-tag {
+					font-size: 1.75rem;
+				}
+
+				.small {
+					font-size: 0.75rem;
+				}
+
+				img {
+					border-radius: 10px;
+				}
+			}
+		}
+	}
+}

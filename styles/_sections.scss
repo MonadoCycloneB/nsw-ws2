@@ -1,0 +1,17 @@
+@import "./util";
+@import "./blocks";
+
+// Sections
+@import "./sections/hero";
+@import "./sections/key-message";
+@import "./sections/exposition";
+@import "./sections/multiplayer";
+@import "./sections/league";
+@import "./sections/features";
+@import "./sections/preorder";
+@import "./sections/nintendo-switch";
+@import "./sections/footer";
+
+section {
+	position: relative;
+}

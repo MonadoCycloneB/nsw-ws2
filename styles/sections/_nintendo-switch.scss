@@ -1,0 +1,35 @@
+@import "../util";
+@import "../blocks";
+
+#nintendo-switch {
+	* {
+		color: white;
+	}
+
+	.container-fluid {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding-inline: 0;
+		margin-block: 20px;
+		@include bg-nintendo();
+
+		h2 {
+			text-align: center;
+			font-size: 1.5rem;
+			max-width: 80%;
+			margin-bottom: 2rem;
+		}
+
+		.choose-system-button {
+			@include flexCenter();
+			margin-bottom: 1rem;
+
+			.btn-reg {
+				color: #{$nintendo-red} !important;
+				padding-inline: 3rem;
+			}
+		}
+	}
+}

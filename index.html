@@ -6,25 +6,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/css-utils/bootstrap.css" />
 		<link rel="stylesheet" href="/css-utils/bootstrap-utilities.rtl.css" />
-		<link rel="stylesheet" href="style.css" />
+		<!-- <link rel="stylesheet" href="style.css" /> -->
+		<link rel="stylesheet" href="/styles/lines.css" />
 		<link rel="stylesheet" href="/css-utils/z-index.css" />
 		<link rel="stylesheet" href="/css-utils/margin.css" />
 		<link rel="stylesheet" href="/css-utils/padding.css" />
+		<link rel="stylesheet" href="/styles/style.css" />
 		<title>Nintendo Switch Sports לנינטנדו סוויץ' – נינטנדו ישראל</title>
 	</head>
-	<body class="mb30">
+	<body>
 		<section id="hero">
 			<div class="hero pos-rel">
-				<div class="hero-bg pos-abs abs--full z-1 mb-55">
-					<div class="bg-sports-gradient pos-abs abs--full z-1"></div>
-					<div class="bg-pattern pos-abs abs--full"></div>
+				<div class="hero-bg">
+					<div id="gradient"></div>
+					<div id="pattern"></div>
 				</div>
-				<div class="switch-logo pos-abs abs--left z1">
+				<div class="switch-logo">
 					<img src="/assets/switch-logo.jpg" alt="Nintendo Switch" />
 				</div>
-				<div class="hero-content mha-md pos-rel">
+				<div class="hero-content">
 					<div class="pre-order-button">
-						<a class="arrow-button" href="#pre-order">
+						<a class="button" href="#pre-order">
 							<div class="btn-text">הזמינו מראש</div>
 							<div class="btn-arrow">
 								<img src="/assets/left-arrow.svg" />
@@ -48,17 +50,17 @@
 			</div>
 		</section>
 		<section id="key-message">
-			<div class="container-fluid mt80 h2-block pb20">
-				<h2 class="text-center mb20">קולקציית הספורט שתזיז את כל המשפחה!</h2>
+			<div class="container-fluid h2-block">
+				<h2>קולקציית הספורט שתזיז את כל המשפחה!</h2>
 				<div class="line-container">
 					<div class="line line--end-left line--w30"></div>
 				</div>
 			</div>
 		</section>
 		<section id="exposition">
-			<div class="container-fluid mh0-xl">
+			<div class="container-fluid">
 				<div class="media-text">
-					<div class="media-text--text container p14">
+					<div class="media-text--text container">
 						<h3>
 							הזיזו את עצמכם עם כדורגל, כדורעף, באולינג, טניס, בדמינטון וצ'מברה
 							באמצעות בקרי ג'וי-קון!
@@ -74,17 +76,16 @@
 							התכוננו לשחק יחד גולף!
 						</p>
 					</div>
-					<div class="media-text--media w-75 mha p10">
+					<div class="media-text--media">
 						<picture>
 							<img
-								class="rounded-3"
 								src="/assets/screenshots/NintendoSwitchSports_scrn_09.jpg"
 								alt=""
 							/>
 						</picture>
 					</div>
 				</div>
-				<div class="line-container mt30">
+				<div class="line-container">
 					<div class="line line--end-left line--w80"></div>
 					<div class="line line--color-green"></div>
 				</div>
@@ -92,25 +93,22 @@
 		</section>
 		<section id="multiplayer">
 			<div class="pos-rel">
-				<div class="bg-div pos-abs abs--full z-1">
-					<div class="bg-sports-gradient pos-abs abs--full z-1"></div>
-					<div class="bg-pattern pos-abs abs--full"></div>
+				<div class="bg-div">
+					<div class="gradient"></div>
+					<div class="pattern"></div>
 				</div>
 				<div class="media-text">
-					<div class="media-text-media no-overflow">
+					<div class="media-text-media">
 						<picture
-							><img
-								src="/assets/characters.png"
-								alt="דמויות המשחק"
-								class="m-10"
+							><img src="/assets/characters.png" alt="דמויות המשחק"
 						/></picture>
 					</div>
-					<div class="media-text--text mh5">
+					<div class="media-text--text">
 						<div class="container">
-							<div class="white-block text-center">
+							<div class="white-block">
 								<h2>חגגו עם חברים ובני משפחה באותו החדר או מכל רחבי העולם.</h2>
 								<h3>גלגלו, חבטו והתחרו עם חברים בכל ששת ענפי הספורט השונים!</h3>
-								<p class="mh-8 mb0">
+								<p>
 									העבירו בקר ג'וי-קון לחבריכם* ושחקו יחד במצבי אחד-על-אחד,
 									שניים-על-שניים או כולם-על-כולם אשר ידאגו להזיז את כולם! במשחק
 									הבאולינג, כל השחקנים יכולים לגלגל את הכדור בו זמנית. אין צורך
@@ -125,28 +123,27 @@
 			</div>
 		</section>
 		<section id="league">
-			<!--  TODO: Delete Padding class later -->
 			<div class="line-container pt5 pb40">
 				<div class="line line--color-lb"></div>
 				<div class="line line--color-green line--end-right line--w80"></div>
 			</div>
-			<div class="bluepill-container no-overflow">
+			<div class="bluepill-container">
 				<div class="bluepill bluepill--right">
-					<div class="bluepill-content mr200">
+					<div class="bluepill-content">
 						<h2>
 							שחקו אונליין והתמודדו מול יריבים קרובים ורחוקים כדי לזכות בפרסים
 							במשחק, או כדי לכוון לליגה המקצוענית.
 						</h2>
 					</div>
 				</div>
-				<div class="bluepill bluepill--left hide-on-mobile"></div>
+				<div class="bluepill bluepill--left"></div>
 			</div>
 			<div class="line-container">
 				<div class="line line--end-left line--w40"></div>
 			</div>
-			<div class="container-fluid mh0-xl">
+			<div class="container-fluid">
 				<div class="media-text">
-					<div class="media-text--text container p14">
+					<div class="media-text--text container">
 						<h3>
 							התמודדו מול יריבים מכל רחבי העולם ושאפו להגיע לליגה המקצוענית בכל
 							אחד מענפי הספורט.
@@ -159,10 +156,9 @@
 							במלאי!
 						</p>
 					</div>
-					<div class="media-text--media w-75 mha p10">
+					<div class="media-text--media">
 						<picture>
 							<img
-								class="rounded-3"
 								src="/assets/screenshots/NintendoSwitchSports_scrn_05.jpg"
 								alt=""
 							/>
@@ -173,14 +169,10 @@
 		</section>
 		<section id="features">
 			<div class="container-fluid">
-				<div class="lined-heading">
-					<div
-						class="line line--color-lb line--round line--end-left line--w80"
-					></div>
+				<div class="heading">
+					<div class="line line--round line--end-left line--w80"></div>
 					<h2 class="text-center">תכונות</h2>
-					<div
-						class="line line--color-lb line--round line--end-right line--w80"
-					></div>
+					<div class="line line--round line--end-right line--w80"></div>
 				</div>
 				<ul class="features-list mv40">
 					<li>
@@ -246,20 +238,16 @@
 			<div class="line"></div>
 		</section>
 		<section id="pre-order">
-			<div class="pos-rel pb50">
-				<div class="bg-div pos-abs abs--full z-1">
-					<div class="bg-sports-gradient pos-abs abs--full z-1"></div>
-					<div class="bg-pattern pos-abs abs--full"></div>
+			<div class="pos-rel">
+				<div class="bg-div">
+					<div class="gradient"></div>
+					<div class="pattern"></div>
 				</div>
 				<div class="container-fluid">
-					<div class="white-heading lined-heading text-center">
-						<div
-							class="line line--end-left line--color-white line--round line--w80"
-						></div>
+					<div class="heading">
+						<div class="line line--end-left line--round line--w80"></div>
 						<h2>הזמינו מראש היום</h2>
-						<div
-							class="line line--end-right line--color-white line--round line--w80"
-						></div>
+						<div class="line line--end-right line--round line--w80"></div>
 					</div>
 					<div class="capsule"><span>זמין ב-29 באפריל</span></div>
 					<div class="versions">
@@ -291,7 +279,7 @@
 			</div>
 		</section>
 		<section id="nintendo-switch">
-			<div class="container-fluid ph0 mv20 bg-nintendo">
+			<div class="container-fluid">
 				<picture>
 					<img
 						src="/assets/nintendo-switch/Console420Mobile.jpg"
@@ -306,15 +294,15 @@
 		</section>
 		<footer>
 			<div class="container-fluid">
-				<div class="support-button d-flex mt30">
-					<a class="arrow-button arrow-button--blue" href="#pre-order">
+				<div class="support-button">
+					<a class="button" href="#pre-order">
 						<div class="btn-text">לשירות ותמיכה</div>
 						<div class="btn-arrow">
 							<img src="/assets/left-arrow.svg" />
 						</div>
 					</a>
 				</div>
-				<div class="legal mt20 text-center">
+				<div class="legal">
 					<small>
 						<p>
 							*אביזרים נוספים עלולים להיות דרושים למשחק מרובה משתתפים. ניתן

@@ -1,0 +1,17 @@
+@import "../util";
+
+@mixin linedHeading($color: $line-lightblue) {
+	margin: auto;
+	@include setWidth(100%, 475px);
+	@include breakpoint($breakpoint-tablet) {
+		@include setWidth(75%, 590px);
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	.line {
+		--this-color: #{$color};
+	}
+}

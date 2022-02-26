@@ -1,0 +1,27 @@
+@import "../util";
+
+.media-text {
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+
+	@media (min-width: $breakpoint-desktop) {
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		grid-template-rows: auto;
+	}
+
+	&--text {
+		padding: 15px;
+	}
+
+	&--media {
+		padding: 10px;
+		@include setWidth(75%, 480px);
+		margin-inline: auto;
+
+		img {
+			border-radius: 15px;
+		}
+	}
+}

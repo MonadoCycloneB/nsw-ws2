@@ -36,7 +36,12 @@
 
 @mixin imageBorder {
 	padding: 10px;
+	border: 10px solid;
+	border-image-slice: 1;
+	border-image-source: linear-gradient(
+		to right,
+		#{$primary-color},
+		#{$secondary-color}
+	);
 	border-radius: 15px;
-	border: 1px solid
-		gradient(linear, left top, right bottom, from(#f5f5f5), to(#ff0000));
 }

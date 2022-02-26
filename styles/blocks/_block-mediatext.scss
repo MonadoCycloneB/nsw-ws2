@@ -13,6 +13,9 @@
 
 	&--text {
 		padding: 15px;
+		@include breakpoint($breakpoint-desktop) {
+			padding-right: 14vw;
+		}
 	}
 
 	&--media {
@@ -34,8 +37,6 @@
 			width: 100%;
 			height: 100%;
 			display: flex;
-		}
-		img.frame {
 		}
 	}
 }

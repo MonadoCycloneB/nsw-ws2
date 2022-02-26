@@ -6,5 +6,9 @@
 		@include breakpoint($breakpoint-desktop) {
 			margin-inline: 0;
 		}
+
+		.media-text {
+			margin-bottom: 5rem;
+		}
 	}
 }

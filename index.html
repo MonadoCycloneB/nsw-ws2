@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/css-utils/bootstrap.css" />
 		<link rel="stylesheet" href="/css-utils/bootstrap-utilities.rtl.css" />
-		<!-- <link rel="stylesheet" href="style.css" /> -->
+		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="/styles/lines.css" />
 		<link rel="stylesheet" href="/css-utils/z-index.css" />
 		<link rel="stylesheet" href="/css-utils/margin.css" />
@@ -52,9 +52,9 @@
 		<section id="key-message">
 			<div class="container-fluid h2-block">
 				<h2>קולקציית הספורט שתזיז את כל המשפחה!</h2>
-				<div class="line-container">
-					<div class="line line--end-left line--w30"></div>
-				</div>
+			</div>
+			<div class="line-container">
+				<div class="line line--end-left line--w40"></div>
 			</div>
 		</section>
 		<section id="exposition">
@@ -101,7 +101,7 @@
 					<div class="pattern"></div>
 				</div>
 				<div class="media-text">
-					<div class="media-text-media">
+					<div class="media-text--media">
 						<picture
 							><img src="/assets/characters.png" alt="דמויות המשחק"
 						/></picture>
@@ -180,9 +180,9 @@
 					<h2 class="text-center">תכונות</h2>
 					<div class="line line--round line--end-right line--w80"></div>
 				</div>
-				<ul class="features-list mv40">
+				<ul class="features-list">
 					<li>
-						<div class="bullet-line">
+						<div class="bullet-line bullet-line--1">
 							<div
 								class="line line--round line--end-left line--color-green"
 							></div>
@@ -190,7 +190,7 @@
 						<span>חבטו, גלגלו ובעטו את דרככם אל הניצחון בשישה ענפי ספורט.</span>
 					</li>
 					<li>
-						<div class="bullet-line">
+						<div class="bullet-line bullet-line--2">
 							<div
 								class="line line--round line--end-left line--color-teal"
 							></div>
@@ -198,7 +198,7 @@
 						שחקו כדורגל, כדורעף, באולינג, טניס, בדמינטון וצ'מברה.
 					</li>
 					<li>
-						<div class="bullet-line">
+						<div class="bullet-line bullet-line--3">
 							<div
 								class="line line--round line--end-left line--color-blue"
 							></div>
@@ -207,21 +207,21 @@
 						לתנועות במשחק.
 					</li>
 					<li>
-						<div class="bullet-line">
+						<div class="bullet-line bullet-line--4">
 							<div class="line line--round line--end-left line--color-lb"></div>
 						</div>
 						השתמשו באביזר רצועת הרגל על מנת לבעוט את הכדור במשחק הבעיטות לשער,
 						או לאחר עדכון חינמי שיגיע בקיץ הקרוב, גם במשחקי כדורגל.
 					</li>
 					<li>
-						<div class="bullet-line">
+						<div class="bullet-line bullet-line--5">
 							<div class="line line--round line--end-left"></div>
 						</div>
 						שחקו אונליין** ואתגרו יריבים אקראיים על מנת לזכות בפרסים במשחק
 						לדוגמת ביגוד, ציוד ועוד הרבה יותר, או הגיעו לליגה המקצוענית.
 					</li>
 					<li>
-						<div class="bullet-line">
+						<div class="bullet-line bullet-line--4">
 							<div
 								class="line line--round line--end-left line--color-green"
 							></div>
@@ -231,7 +231,7 @@
 						אחרים מרחבי העולם.
 					</li>
 					<li>
-						<div class="bullet-line">
+						<div class="bullet-line bullet-line--3">
 							<div
 								class="line line--round line--end-left line--color-teal"
 							></div>
@@ -258,27 +258,36 @@
 					<div class="capsule"><span>זמין ב-29 באפריל</span></div>
 					<div class="versions">
 						<div class="white-block">
-							<picture
-								><img src="/assets/edition-physical.png" alt="מהדורה פיזית"
-							/></picture>
-							<h3>מהדורה פיזית</h3>
-							<p>
-								הזמינו בהזמנה מוקדמת את המהדורה הפיזית, אשר מגיעה עם אביזר
-								הרצועה לרגל.
-							</p>
-							<span class="price-tag">229₪</span>
-							<small>ניתן לרכוש את אביזר הרצועה לרגל בנפרד.</small>
+							<div class="media-text">
+								<div class="media-text--media">
+									<picture
+										><img src="/assets/edition-physical.png" alt="מהדורה פיזית"
+									/></picture></div>
+								<div class="media-text--text">
+									<h3>מהדורה פיזית</h3>
+									<p>
+										הזמינו בהזמנה מוקדמת את המהדורה הפיזית, אשר מגיעה עם אביזר
+										הרצועה לרגל.
+									</p>
+									<span class="price-tag">229₪</span>
+									<small>ניתן לרכוש את אביזר הרצועה לרגל בנפרד.</small>
+								</div>
+							</div>
 						</div>
 						<div class="white-block">
-							<picture
-								><img src="/assets/edition-digital.jpg" alt="מהדורה דיגיטלית"
-							/></picture>
-							<h3>מהדורה דיגיטלית</h3>
-							<p>
-								הזמינו בהזמנה מוקדמת את המהדורה הפיזית, אשר מגיעה עם אביזר
-								הרצועה לרגל.
-							</p>
-							<span class="price-tag">229₪</span>
+							<div class="media-text">
+								<div class="media-text--media">
+									<picture
+										><img src="/assets/edition-digital.jpg" alt="מהדורה דיגיטלית"
+									/></picture></div>
+								<div class="media-text--text">
+									<h3>מהדורה דיגיטלית</h3>
+									<p>
+										הזמינו בהזמנה מוקדמת את המהדורה הפיזית, אשר מגיעה עם אביזר
+										הרצועה לרגל.
+									</p>
+									<span class="price-tag">229₪</span></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -294,14 +303,19 @@
 				</picture>
 				<h2>זמין רק עבור משפחת המערכות של Nintendo Switch.</h2>
 				<div class="choose-system-button">
-					<a href="" class="btn-reg">איזו מערכת מתאימה לי?</a>
+					<a class="button" href="">
+					<div class="btn-text">איזו מערכת מתאימה לי?</div>
+					<div class="btn-arrow">
+						<img src="/assets/left-arrow.svg" />
+					</div>
+				</a>
 				</div>
 			</div>
 		</section>
 		<footer>
 			<div class="container-fluid">
 				<div class="support-button">
-					<a class="button" href="#pre-order">
+					<a class="button" href="">
 						<div class="btn-text">לשירות ותמיכה</div>
 						<div class="btn-arrow">
 							<img src="/assets/left-arrow.svg" />

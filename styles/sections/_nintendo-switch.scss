@@ -26,9 +26,8 @@
 			@include flexCenter();
 			margin-bottom: 1rem;
 
-			.btn-reg {
-				color: #{$nintendo-red} !important;
-				padding-inline: 3rem;
+			.button {
+				@include arrowButton(white, $nintendo-red, $filter-red);
 			}
 		}
 	}

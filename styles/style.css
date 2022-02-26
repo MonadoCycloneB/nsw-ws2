@@ -22,6 +22,12 @@
   padding: 15px;
 }
 
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
+}
+
 .media-text--media {
   padding: 14px;
   width: 75%;
@@ -113,11 +119,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -156,6 +168,12 @@
   padding: 15px;
 }
 
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
+}
+
 .media-text--media {
   padding: 14px;
   width: 75%;
@@ -247,11 +265,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -290,6 +314,12 @@
   padding: 15px;
 }
 
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
+}
+
 .media-text--media {
   padding: 14px;
   width: 75%;
@@ -381,11 +411,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -412,7 +448,7 @@
   top: 0;
   left: 0;
   right: 0;
-  bottom: 89.09px;
+  bottom: 88px;
   z-index: -1;
 }
 
@@ -544,9 +580,9 @@
 #hero .hero .hero-content .round-bottom-container {
   position: absolute;
   top: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
 }
 
 .media-text {
@@ -571,6 +607,12 @@
 
 .media-text--text {
   padding: 15px;
+}
+
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
 }
 
 .media-text--media {
@@ -664,11 +706,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -718,6 +766,12 @@
   padding: 15px;
 }
 
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
+}
+
 .media-text--media {
   padding: 14px;
   width: 75%;
@@ -809,11 +863,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -862,6 +922,12 @@
   padding: 15px;
 }
 
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
+}
+
 .media-text--media {
   padding: 14px;
   width: 75%;
@@ -953,11 +1019,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -1002,19 +1074,43 @@
   background-repeat: repeat;
 }
 
-#multiplayer .media-text .media-text-media {
-  overflow: hidden;
+@media (min-width: 1200px) {
+  #multiplayer .media-text {
+    padding-block: 4rem;
+  }
 }
 
-#multiplayer .media-text .media-text-media img {
+#multiplayer .media-text--media {
+  overflow: hidden;
+  padding: 0;
+}
+
+#multiplayer .media-text img {
   margin: -10px;
 }
 
-#multiplayer .media-text .media-text--text {
+@media (min-width: 1200px) {
+  #multiplayer .media-text--media {
+    margin-left: 25px;
+    overflow: visible;
+  }
+  #multiplayer .media-text--media img {
+    width: 125%;
+  }
+}
+
+#multiplayer .media-text--text {
   margin-inline: 5px;
 }
 
-#multiplayer .media-text .media-text--text .white-block {
+@media (min-width: 1200px) {
+  #multiplayer .media-text--text {
+    padding-right: 0;
+    padding-left: 10vw;
+  }
+}
+
+#multiplayer .media-text--text .white-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1028,15 +1124,15 @@
   text-align: center;
 }
 
-#multiplayer .media-text .media-text--text .white-block * {
+#multiplayer .media-text--text .white-block * {
   margin-bottom: 1rem;
 }
 
-#multiplayer .media-text .media-text--text .white-block h2 {
+#multiplayer .media-text--text .white-block h2 {
   font-size: 1.5rem;
 }
 
-#multiplayer .media-text .media-text--text .white-block p {
+#multiplayer .media-text--text .white-block p {
   margin-inline: -8px;
   margin-bottom: 0;
 }
@@ -1065,6 +1161,12 @@
   padding: 15px;
 }
 
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
+}
+
 .media-text--media {
   padding: 14px;
   width: 75%;
@@ -1156,11 +1258,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -1179,6 +1287,10 @@
   #league .container-fluid {
     margin-inline: 0;
   }
+}
+
+#league .container-fluid .media-text {
+  margin-bottom: 5rem;
 }
 
 .media-text {
@@ -1205,6 +1317,12 @@
   padding: 15px;
 }
 
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
+}
+
 .media-text--media {
   padding: 14px;
   width: 75%;
@@ -1296,11 +1414,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -1338,16 +1462,42 @@
   --this-color: #87aaf5;
 }
 
-#features .heading .features-list {
+#features .features-list {
   margin-block: 40px;
   list-style: none;
   padding-right: 4rem;
   padding-left: 0.5rem;
+  margin-bottom: 3rem;
 }
 
-#features .heading .features-list li {
+@media (min-width: 1200px) {
+  #features .features-list {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+}
+
+#features .features-list li {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .bullet-line--1 {
+    min-width: 60px;
+  }
+  .bullet-line--2 {
+    min-width: 90px;
+  }
+  .bullet-line--3 {
+    min-width: 120px;
+  }
+  .bullet-line--4 {
+    min-width: 150px;
+  }
+  .bullet-line--5 {
+    min-width: 180px;
+  }
 }
 
 .media-text {
@@ -1372,6 +1522,12 @@
 
 .media-text--text {
   padding: 15px;
+}
+
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
 }
 
 .media-text--media {
@@ -1465,11 +1621,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -1594,6 +1756,8 @@
   border-radius: 1.5rem;
   padding: 1rem;
   margin-bottom: 0;
+  margin-inline: auto;
+  max-width: 648px;
 }
 
 #pre-order .container-fluid .versions .white-block * {
@@ -1604,6 +1768,45 @@
   font-size: 1.5rem;
 }
 
+#pre-order .container-fluid .versions .white-block .media-text {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+  #pre-order .container-fluid .versions .white-block {
+    max-width: 1000px;
+  }
+  #pre-order .container-fluid .versions .white-block .media-text {
+    min-height: 250px;
+  }
+  #pre-order .container-fluid .versions .white-block .media-text--media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  #pre-order .container-fluid .versions .white-block .media-text--media img,
+  #pre-order .container-fluid .versions .white-block .media-text--media picture {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  #pre-order .container-fluid .versions .white-block .media-text--text {
+    padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 0;
+  }
+  #pre-order .container-fluid .versions .white-block .price-tag {
+    margin-bottom: 0;
+  }
+}
+
 #pre-order .container-fluid .versions .white-block h3 {
   color: #005ac5;
   font-size: 1.5rem;
@@ -1611,6 +1814,7 @@
 
 #pre-order .container-fluid .versions .white-block .price-tag {
   font-size: 1.75rem;
+  display: block;
 }
 
 #pre-order .container-fluid .versions .white-block .small {
@@ -1643,6 +1847,12 @@
 
 .media-text--text {
   padding: 15px;
+}
+
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
 }
 
 .media-text--media {
@@ -1736,11 +1946,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -1799,9 +2015,71 @@
   margin-bottom: 1rem;
 }
 
-#nintendo-switch .container-fluid .choose-system-button .btn-reg {
-  color: #e60012 !important;
-  padding-inline: 3rem;
+#nintendo-switch .container-fluid .choose-system-button .button {
+  --arrow-margin: -2.25rem;
+  --text-pad: 2.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0.75rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#nintendo-switch .container-fluid .choose-system-button .button div {
+  background-color: white;
+  border-radius: 500px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#nintendo-switch .container-fluid .choose-system-button .button .btn-text {
+  color: #e60012;
+  padding: 0.5rem 1.5rem;
+  padding-left: var(--text-pad);
+  font-family: "Rubik";
+  font-weight: 600;
+}
+
+#nintendo-switch .container-fluid .choose-system-button .button .btn-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: var(--arrow-margin);
+}
+
+#nintendo-switch .container-fluid .choose-system-button .button .btn-arrow img {
+  height: 1rem;
+  width: 1rem;
+  -webkit-filter: invert(10%) sepia(97%) saturate(5904%) hue-rotate(350deg) brightness(93%) contrast(108%);
+          filter: invert(10%) sepia(97%) saturate(5904%) hue-rotate(350deg) brightness(93%) contrast(108%);
+}
+
+#nintendo-switch .container-fluid .choose-system-button .button:hover {
+  --text-pad: 1.5rem;
+  --arrow-margin: 0.25rem;
+}
+
+#nintendo-switch .container-fluid .choose-system-button .button:hover a {
+  color: #e60012;
 }
 
 .media-text {
@@ -1826,6 +2104,12 @@
 
 .media-text--text {
   padding: 15px;
+}
+
+@media (min-width: 1200px) {
+  .media-text--text {
+    padding-right: 14vw;
+  }
 }
 
 .media-text--media {
@@ -1919,11 +2203,17 @@
 }
 
 .bluepill h2 {
-  margin: auto 3rem auto auto;
+  margin: auto 3rem auto 30%;
   font-size: 1.5rem;
   width: 70%;
   max-width: 350px;
   min-width: auto;
+}
+
+@media (min-width: 768px) {
+  .bluepill h2 {
+    max-width: 710px;
+  }
 }
 
 .btn-reg {
@@ -2037,6 +2327,12 @@ section {
 :root {
   font-weight: 400;
   font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: 20px;
+  }
 }
 
 body {

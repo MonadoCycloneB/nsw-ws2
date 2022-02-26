@@ -23,17 +23,38 @@
 
 	// Content
 	.media-text {
-		.media-text-media {
-			overflow: hidden;
+		@include breakpoint($breakpoint-desktop) {
+			padding-block: 4rem;
+		}
 
-			img {
-				margin: -10px;
+		&--media {
+			overflow: hidden;
+			padding: 0;
+		}
+
+		img {
+			margin: -10px;
+		}
+
+		@include breakpoint($breakpoint-desktop) {
+			&--media {
+				margin-left: 25px;
+				overflow: visible;
+
+				img {
+					width: 125%;
+				}
 			}
 		}
 
 		// Text
-		.media-text--text {
+		&--text {
 			margin-inline: 5px;
+
+			@include breakpoint($breakpoint-desktop) {
+				padding-right: 0;
+				padding-left: 10vw;
+			}
 
 			.white-block {
 				@include whiteBlock();

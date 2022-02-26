@@ -1,0 +1,49 @@
+@import "../util";
+@import "../blocks";
+
+#multiplayer {
+	// BG
+	.bg-div {
+		@include absolutePos(0, 0, 0, 0);
+		z-index: -1;
+
+		// Gradient
+		.gradient {
+			@include absolutePos(0, 0, 0, 0);
+			z-index: -1;
+			@include bg-gradient();
+		}
+
+		// Pattern
+		.pattern {
+			@include absolutePos(0, 0, 0, 0);
+			@include bg-pattern();
+		}
+	}
+
+	// Content
+	.media-text {
+		.media-text-media {
+			overflow: hidden;
+
+			img {
+				margin: -10px;
+			}
+		}
+
+		// Text
+		.media-text--text {
+			margin-inline: 5px;
+
+			.white-block {
+				@include whiteBlock();
+				text-align: center;
+
+				p {
+					margin-inline: -8px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@import "./vars";
+
+@mixin absolutePos($top, $right, $bottom, $left) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	right: $right;
+	bottom: $bottom;
+}
+
+@mixin setWidth($width, $max, $min: auto) {
+	width: $width;
+	max-width: $max;
+	min-width: $min;
+}
+
+@mixin breakpoint($breakpoint) {
+	@media (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin hideOnMobile($display: flex) {
+	display: none;
+	@include breakpoint($breakpoint-tablet) {
+		display: $display;
+	}
+}
+
+@mixin flexCenter($direction: column) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
+}

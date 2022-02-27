@@ -468,7 +468,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../../assets/sports-pattern.png");
+  background-image: url("../assets/sports-pattern.png");
   background-size: 800px;
   background-repeat: repeat;
 }
@@ -1069,7 +1069,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../../assets/sports-pattern.png");
+  background-image: url("../assets/sports-pattern.png");
   background-size: 800px;
   background-repeat: repeat;
 }
@@ -1675,7 +1675,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("../../assets/sports-pattern.png");
+  background-image: url("../assets/sports-pattern.png");
   background-size: 800px;
   background-repeat: repeat;
 }
@@ -1772,6 +1772,17 @@
   margin-bottom: 0;
 }
 
+#pre-order .container-fluid .versions .white-block .media-text--media {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+#pre-order .container-fluid .versions .white-block .media-text--media img,
+#pre-order .container-fluid .versions .white-block .media-text--media picture {
+  margin-bottom: 0;
+}
+
 @media (min-width: 1200px) {
   #pre-order .container-fluid .versions .white-block {
     max-width: 1000px;
@@ -1783,12 +1794,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 0;
-    padding: 0;
+    padding-left: 1rem;
   }
-  #pre-order .container-fluid .versions .white-block .media-text--media img,
-  #pre-order .container-fluid .versions .white-block .media-text--media picture {
-    margin-bottom: 0;
+  #pre-order .container-fluid .versions .white-block .media-text--media img {
     width: 100%;
   }
   #pre-order .container-fluid .versions .white-block .media-text--text {

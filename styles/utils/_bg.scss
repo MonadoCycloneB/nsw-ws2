@@ -4,7 +4,7 @@
 	background: linear-gradient(130deg, $primary-color 0%, $secondary-color 100%);
 }
 @mixin bg-pattern {
-	background-image: url("../../assets/sports-pattern.png");
+	background-image: url("../assets/sports-pattern.png");
 	background-size: 800px;
 	background-repeat: repeat;
 }

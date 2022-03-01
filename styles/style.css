@@ -2332,6 +2332,16 @@ section {
   position: relative;
 }
 
+.anim-fade-in {
+  opacity: 1 !important;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.anim-fade-in--intro {
+  opacity: 0;
+}
+
 :root {
   font-weight: 400;
   font-size: 14px;
@@ -2346,6 +2356,7 @@ section {
 body {
   margin: 0;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 h1,

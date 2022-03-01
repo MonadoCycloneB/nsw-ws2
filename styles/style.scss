@@ -1,6 +1,7 @@
 @import "./util";
 @import "./blocks";
 @import "./sections";
+@import "./anims";
 
 :root {
 	font-weight: 400;
@@ -12,6 +13,7 @@
 body {
 	margin: 0;
 	overflow-x: hidden;
+	width: 100vw;
 }
 h1,
 h2 {

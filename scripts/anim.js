@@ -138,7 +138,7 @@ gsap.fromTo(
 			start: "40% center",
 			// end: "bottom 80%",
 			toggleActions: "play none none none",
-			markers: true,
+			// markers: true,
 		},
 		delay: 0.2,
 		duration: 0.8,
@@ -154,9 +154,8 @@ gsap.fromTo(
 	},
 	{
 		scrollTrigger: {
-			trigger: "#exposition .media-text--media",
-			start: "30% center",
-			// end: "bottom 80%",
+			trigger: "#multiplayer",
+			start: "center 80%",
 			toggleActions: "play none none none",
 			markers: true,
 		},
@@ -164,5 +163,108 @@ gsap.fromTo(
 		ease: "power4.out",
 		duration: 0.6,
 		x: 0,
+	}
+);
+
+// Multiplayer
+const multDelay = 0.15;
+const multDuration = 0.3;
+gsap.fromTo(
+	"#multiplayer .media-text--text .white-block",
+	{
+		opacity: 0,
+		y: 50,
+	},
+	{
+		scrollTrigger: {
+			trigger: "#multiplayer",
+			start: "center 80%",
+			toggleActions: "play none none none",
+			markers: true,
+		},
+		ease: "power2.out",
+		durtaion: multDuration,
+		opacity: 1,
+		y: 0,
+	}
+);
+gsap.fromTo(
+	"#multiplayer .media-text--text h2",
+	{
+		opacity: 0,
+		y: 50,
+	},
+	{
+		scrollTrigger: {
+			trigger: "#multiplayer",
+			start: "center 80%",
+			toggleActions: "play none none none",
+			markers: true,
+		},
+		delay: multDelay * 1,
+		ease: "power2.out",
+		durtaion: multDuration,
+		opacity: 1,
+		y: 0,
+	}
+);
+gsap.fromTo(
+	"#multiplayer .media-text--text h3",
+	{
+		opacity: 0,
+		y: 50,
+	},
+	{
+		scrollTrigger: {
+			trigger: "#multiplayer",
+			start: "center 80%",
+			toggleActions: "play none none none",
+			markers: true,
+		},
+		delay: multDelay * 2,
+		ease: "power2.out",
+		durtaion: multDuration,
+		opacity: 1,
+		y: 0,
+	}
+);
+gsap.fromTo(
+	"#multiplayer .media-text--text p",
+	{
+		opacity: 0,
+		y: 50,
+	},
+	{
+		scrollTrigger: {
+			trigger: "#multiplayer",
+			start: "center 80%",
+			toggleActions: "play none none none",
+			markers: true,
+		},
+		delay: multDelay * 3,
+		ease: "power2.out",
+		durtaion: multDuration,
+		opacity: 1,
+		y: 0,
+	}
+);
+gsap.fromTo(
+	"#multiplayer .media-text--media img",
+	{
+		scaleX: 0,
+		scaleY: 0,
+	},
+	{
+		scrollTrigger: {
+			trigger: "#multiplayer",
+			start: "center 80%",
+			toggleActions: "play none none none",
+			markers: true,
+		},
+		delay: multDelay * 2,
+		ease: "elastic.out(1, 0.8)",
+		duration: 0.75,
+		scaleX: 1,
+		scaleY: 1,
 	}
 );

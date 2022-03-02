@@ -382,7 +382,7 @@ anim_moveFadeY(
 animComp_mediaTextImagePop("#league", trig_league_b, dly_league * 3);
 
 // Features
-animComp_lineHeading("#features", trig_features, dly_features);
+animComp_lineHeading("#features .heading", trig_features, dly_features);
 
 const bulletFrom = {
 	opacity: 0,
@@ -439,6 +439,15 @@ gsap.fromTo("#features #feat-7 span", itemFrom, itemTo(count));
 count += 0.5;
 
 // Pre Order
+anim_moveFadeX(
+	"#features .line--color-green.line--w80",
+	trig_preOrder_a,
+	0.05,
+	"110%",
+	1,
+	0.6
+);
+
 animComp_lineHeading("#pre-order", trig_preOrder_a, dly_preOrder);
 anim_pop("#pre-order .capsule", trig_preOrder_a, dly_preOrder * 2);
 

@@ -157,9 +157,9 @@ const animComp_mediaTextImagePop = function (selector, trigger, dly) {
 		1
 	);
 	anim_pop(
-		selector + " .media-text--media img",
+		selector + " .media-text--media .screenshot",
 		trigger,
-		dly + 0.2,
+		dly + 0.1,
 		ease_pop_img,
 		0.8
 	);

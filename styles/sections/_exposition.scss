@@ -15,6 +15,8 @@
 		.trailer-link {
 			display: inline-block;
 			position: relative;
+			overflow: hidden;
+			z-index: 1;
 
 			strong {
 				position: absolute;
@@ -26,6 +28,7 @@
 				padding: 0.5rem 1rem;
 
 				border-top-right-radius: 0.5rem;
+				border-bottom-left-radius: 0.5rem;
 			}
 		}
 	}

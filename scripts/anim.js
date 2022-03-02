@@ -31,7 +31,11 @@ const trig_features = {
 	trigger: "#features",
 	start: "50% 80%",
 	toggleActions: "play none none none",
-	markers: true,
+};
+const trig_preOrder = {
+	trigger: "#pre-order",
+	start: "50% 80%",
+	toggleActions: "play none none none",
 };
 
 // Delays
@@ -39,6 +43,70 @@ const dly_exposition = 0.15;
 const dly_multiplayer = 0.15;
 const dly_league = 0.15;
 const dly_features = 0.15;
+
+// Preset Animations
+const anim_lineHeading_topLine = function (hSelector, trigger, dly, delayMult) {
+	hSelector += " .line--end-left";
+	gsap.fromTo(
+		hSelector,
+		{
+			opacity: 0,
+			x: "40%",
+		},
+		{
+			scrollTrigger: trigger,
+			delay: dly * delayMult,
+			duration: 0.5,
+			ease: "power2.out",
+			x: 0,
+			opacity: 1,
+		}
+	);
+};
+const anim_lineHeading_bottomLine = function (
+	hSelector,
+	trigger,
+	dly,
+	delayMult
+) {
+	hSelector += " .line--end-right";
+	gsap.fromTo(
+		hSelector,
+		{
+			opacity: 0,
+			x: "-40%",
+		},
+		{
+			scrollTrigger: trigger,
+			delay: dly * delayMult,
+			duration: 0.5,
+			ease: "power2.out",
+			x: 0,
+			opacity: 1,
+		}
+	);
+};
+const anim_lineHeading_heading = function (hSelector, trigger, dly, delayMult) {
+	hSelector += " h2";
+	gsap.fromTo(
+		hSelector,
+		{
+			opacity: 0,
+		},
+		{
+			scrollTrigger: trigger,
+			delay: dly * delayMult,
+			duration: 0.3,
+			ease: "power2.out",
+			opacity: 1,
+		}
+	);
+};
+const animComp_lineHeading = function (selector, trigger, dly) {
+	anim_lineHeading_topLine(selector, trigger, dly, 0);
+	anim_lineHeading_bottomLine(selector, trigger, dly, 1);
+	anim_lineHeading_heading(selector, trigger, dly, 3);
+};
 
 gsap.to("#hero", {
 	opacity: 1,
@@ -373,49 +441,51 @@ gsap.fromTo(
 );
 
 // Features
-gsap.fromTo(
-	"#features .heading .line--end-left",
-	{
-		x: "40%",
-		opacity: 0,
-	},
-	{
-		scrollTrigger: trig_features,
-		delay: dly_features * 0,
-		duration: 0.5,
-		ease: "power2.out",
-		x: 0,
-		opacity: 1,
-	}
-);
-gsap.fromTo(
-	"#features .heading .line--end-right",
-	{
-		x: "-40%",
-		opacity: 0,
-	},
-	{
-		scrollTrigger: trig_features,
-		delay: dly_features * 1,
-		duration: 0.5,
-		ease: "power2.out",
-		x: 0,
-		opacity: 1,
-	}
-);
-gsap.fromTo(
-	"#features .heading h2",
-	{
-		opacity: 0,
-	},
-	{
-		scrollTrigger: trig_features,
-		delay: dly_features * 3,
-		duration: 0.3,
-		ease: "power2.out",
-		opacity: 1,
-	}
-);
+// gsap.fromTo(
+// 	"#features .heading .line--end-left",
+// 	{
+// 		x: "40%",
+// 		opacity: 0,
+// 	},
+// 	{
+// 		scrollTrigger: trig_features,
+// 		delay: dly_features * 0,
+// 		duration: 0.5,
+// 		ease: "power2.out",
+// 		x: 0,
+// 		opacity: 1,
+// 	}
+// );
+// gsap.fromTo(
+// 	"#features .heading .line--end-right",
+// 	{
+// 		x: "-40%",
+// 		opacity: 0,
+// 	},
+// 	{
+// 		scrollTrigger: trig_features,
+// 		delay: dly_features * 1,
+// 		duration: 0.5,
+// 		ease: "power2.out",
+// 		x: 0,
+// 		opacity: 1,
+// 	}
+// );
+// gsap.fromTo(
+// 	"#features .heading h2",
+// 	{
+// 		opacity: 0,
+// 	},
+// 	{
+// 		scrollTrigger: trig_features,
+// 		delay: dly_features * 3,
+// 		duration: 0.3,
+// 		ease: "power2.out",
+// 		opacity: 1,
+// 	}
+// );
+
+animComp_lineHeading("#features", trig_features, dly_features);
 
 const bulletFrom = {
 	opacity: 0,

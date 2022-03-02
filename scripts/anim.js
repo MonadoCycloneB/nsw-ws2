@@ -35,12 +35,12 @@ const trig_preOrder_a = {
 	trigger: "#pre-order",
 	start: "15% 90%",
 	toggleActions: "play none none none",
-	markers: true,
 };
 const trig_preOrder_b = {
 	trigger: "#pre-order",
 	start: "50% 80%",
 	toggleActions: "play none none none",
+	markers: true,
 };
 
 // Delays
@@ -161,6 +161,57 @@ const animComp_mediaTextImagePop = function (selector, trigger, dly) {
 	);
 };
 
+const anim_moveFadeX = function (
+	selector,
+	trigger,
+	dly,
+	x,
+	opacity,
+	duration,
+	ease = "power2.out"
+) {
+	gsap.fromTo(
+		selector,
+		{
+			x: x,
+			opacity: opacity,
+		},
+		{
+			scrollTrigger: trigger,
+			delay: dly,
+			duration: duration,
+			ease: ease,
+			x: 0,
+			opacity: 1,
+		}
+	);
+};
+const anim_moveFadeY = function (
+	selector,
+	trigger,
+	dly,
+	y,
+	opacity,
+	duration,
+	ease = "power2.out"
+) {
+	gsap.fromTo(
+		selector,
+		{
+			y: y,
+			opacity: opacity,
+		},
+		{
+			scrollTrigger: trigger,
+			delay: dly,
+			duration: duration,
+			ease: ease,
+			y: 0,
+			opacity: 1,
+		}
+	);
+};
+
 gsap.to("#hero", {
 	opacity: 1,
 	duration: 0.4,
@@ -192,130 +243,85 @@ gsap.fromTo(
 );
 
 // Key Messaging
-gsap.fromTo(
+anim_moveFadeY(
 	"#key-message h2",
 	{
-		opacity: 0,
-		y: 50,
+		trigger: "#key-message",
+		start: "-100px 80%",
+		end: "bottom 20%",
+		toggleActions: "play none none none",
 	},
-	{
-		scrollTrigger: {
-			trigger: "#key-message",
-			start: "-100px 80%",
-			end: "bottom 20%",
-			toggleActions: "play none none none",
-		},
-		ease: "power1.out",
-		duration: 0.5,
-		opacity: 1,
-		y: 0,
-	}
+	0,
+	50,
+	0,
+	0.5
 );
 
 // Exposistion
-gsap.fromTo(
-	"#key-message .line",
-	{
-		x: "110%",
-	},
-	{
-		scrollTrigger: trig_exposition,
-		delay: 0.05,
-		ease: "power2.out",
-		duration: 0.6,
-		x: 0,
-	}
+anim_moveFadeX("#key-message .line", trig_exposition, 0.05, "110%", 1, 0.6);
+
+anim_moveFadeY(
+	"#exposition .media-text--text h3",
+	trig_exposition,
+	0,
+	50,
+	0,
+	0.5
 );
-gsap.fromTo(
-	"#exposition .media-text--text",
-	{
-		opacity: 0,
-	},
-	{
-		scrollTrigger: trig_exposition,
-		delay: 0.05,
-		ease: "power4.out",
-		duration: 0.6,
-		opacity: 1,
-	}
+anim_moveFadeY(
+	"#exposition .media-text--text p",
+	trig_exposition,
+	dly_exposition,
+	50,
+	0,
+	0.5
 );
 
 animComp_mediaTextImagePop("#exposition", trig_exposition, 0);
 
-gsap.fromTo(
+anim_moveFadeX(
 	"#exposition .line--w80",
-	{
-		x: "110%",
-	},
-	{
-		scrollTrigger: trig_multiplayer,
-		delay: 0.05,
-		ease: "power2.out",
-		duration: 0.6,
-		x: 0,
-	}
+	trig_multiplayer,
+	0.05,
+	"110%",
+	1,
+	0.6
 );
 
 // Multiplayer
 const multDuration = 0.3;
-gsap.fromTo(
+
+anim_moveFadeY(
 	"#multiplayer .media-text--text .white-block",
-	{
-		opacity: 0,
-		y: 50,
-	},
-	{
-		scrollTrigger: trig_multiplayer,
-		ease: "power2.out",
-		durtaion: multDuration,
-		opacity: 1,
-		y: 0,
-	}
+	trig_multiplayer,
+	0,
+	50,
+	0,
+	multDuration
 );
-gsap.fromTo(
+anim_moveFadeY(
 	"#multiplayer .media-text--text h2",
-	{
-		opacity: 0,
-		y: 50,
-	},
-	{
-		scrollTrigger: trig_multiplayer,
-		delay: dly_multiplayer * 1,
-		ease: "power2.out",
-		durtaion: multDuration,
-		opacity: 1,
-		y: 0,
-	}
+	trig_multiplayer,
+	dly_multiplayer * 1,
+	50,
+	0,
+	multDuration
 );
-gsap.fromTo(
+anim_moveFadeY(
 	"#multiplayer .media-text--text h3",
-	{
-		opacity: 0,
-		y: 50,
-	},
-	{
-		scrollTrigger: trig_multiplayer,
-		delay: dly_multiplayer * 2,
-		ease: "power2.out",
-		durtaion: multDuration,
-		opacity: 1,
-		y: 0,
-	}
+	trig_multiplayer,
+	dly_multiplayer * 2,
+	50,
+	0,
+	multDuration
 );
-gsap.fromTo(
+anim_moveFadeY(
 	"#multiplayer .media-text--text p",
-	{
-		opacity: 0,
-		y: 50,
-	},
-	{
-		scrollTrigger: trig_multiplayer,
-		delay: dly_multiplayer * 3,
-		ease: "power2.out",
-		durtaion: multDuration,
-		opacity: 1,
-		y: 0,
-	}
+	trig_multiplayer,
+	dly_multiplayer * 3,
+	50,
+	0,
+	multDuration
 );
 
 anim_pop(
@@ -326,109 +332,36 @@ anim_pop(
 	0.75
 );
 
-// gsap.fromTo(
-// 	"#multiplayer .media-text--media img",
-// 	{
-// 		scaleX: 0,
-// 		scaleY: 0,
-// 	},
-// 	{
-// 		scrollTrigger: trig_multiplayer,
-// 		delay: dly_multiplayer * 2,
-// 		ease: "elastic.out(1, 0.8)",
-// 		duration: 0.75,
-// 		scaleX: 1,
-// 		scaleY: 1,
-// 	}
-// );
-
 // League
-gsap.fromTo(
+anim_moveFadeX(
 	"#league .line--color-green",
-	{
-		x: "-100%",
-	},
-	{
-		scrollTrigger: trig_league_a,
-		delay: 0.05,
-		ease: "power2.out",
-		duration: 0.6,
-		x: 0,
-	}
-);
-gsap.fromTo(
-	"#league .bluepill--right",
-	{
-		x: "100%",
-		opacity: 0,
-	},
-	{
-		scrollTrigger: trig_league_a,
-		delay: 0.25,
-		ease: "power2.out",
-		duration: 0.8,
-		x: 0,
-		opacity: 1,
-	}
-);
-gsap.fromTo(
-	"#league .bluepill--left",
-	{
-		x: "-100%",
-		opacity: 0,
-	},
-	{
-		scrollTrigger: trig_league_a,
-		delay: 0.45,
-		ease: "power2.out",
-		duration: 0.3,
-		x: 0,
-		opacity: 1,
-	}
-);
-gsap.fromTo(
-	"#league .line--end-left",
-	{
-		x: "105%",
-	},
-	{
-		scrollTrigger: trig_league_b,
-		delay: 0.05,
-		ease: "power2.out",
-		duration: 0.8,
-		x: 0,
-	}
+	trig_league_a,
+	0.05,
+	"-100%",
+	1,
+	0.6
 );
 
-gsap.fromTo(
+anim_moveFadeX("#league .bluepill--right", trig_league_a, 0.25, "100%", 0, 0.8);
+anim_moveFadeX("#league .bluepill--left", trig_league_a, 0.45, "-100%", 0, 0.5);
+
+anim_moveFadeX("#league .line--end-left", trig_league_b, 0.05, "105%", 0, 0.8);
+
+anim_moveFadeY(
 	"#league .media-text--text h3",
-	{
-		opacity: 0,
-		y: 50,
-	},
-	{
-		scrollTrigger: trig_league_b,
-		delay: 0,
-		ease: "power2.out",
-		durtaion: multDuration,
-		opacity: 1,
-		y: 0,
-	}
+	trig_league_b,
+	0,
+	50,
+	0,
+	multDuration
 );
-gsap.fromTo(
+anim_moveFadeY(
 	"#league .media-text--text p",
-	{
-		opacity: 0,
-		y: 50,
-	},
-	{
-		scrollTrigger: trig_league_b,
-		delay: dly_league * 2,
-		ease: "power2.out",
-		durtaion: multDuration,
-		opacity: 1,
-		y: 0,
-	}
+	trig_league_b,
+	dly_league * 1,
+	50,
+	0,
+	multDuration
 );
 
 animComp_mediaTextImagePop("#league", trig_league_b, dly_league * 3);
@@ -461,7 +394,7 @@ const itemTo = function (delayMult) {
 	};
 };
 
-let count = 3;
+let count = 7;
 gsap.fromTo("#features #feat-1 .bullet-line", bulletFrom, bulletTo(count));
 gsap.fromTo("#features #feat-1 span", itemFrom, itemTo(count));
 count += 0.5;
@@ -492,3 +425,4 @@ count += 0.5;
 
 // Pre Order
 animComp_lineHeading("#pre-order", trig_preOrder_a, dly_preOrder);
+anim_pop("#pre-order .capsule", trig_preOrder_a, dly_preOrder * 2);

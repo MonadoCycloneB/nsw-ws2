@@ -40,7 +40,11 @@ const trig_preOrder_b = {
 	trigger: "#pre-order",
 	start: "50% 80%",
 	toggleActions: "play none none none",
-	markers: true,
+};
+const trig_nintendoSwitch = {
+	trigger: "#nintendo-switch",
+	start: "50% 80%",
+	toggleActions: "play none none none",
 };
 
 // Delays
@@ -210,6 +214,17 @@ const anim_moveFadeY = function (
 			opacity: 1,
 		}
 	);
+};
+const animComp_textArrayAppear = function (
+	selectors,
+	trigger,
+	delay,
+	interval
+) {
+	selectors.forEach(element => {
+		anim_moveFadeY(element, trigger, delay, 50, 0, 0.3);
+		delay += interval;
+	});
 };
 
 gsap.to("#hero", {
@@ -426,3 +441,46 @@ count += 0.5;
 // Pre Order
 animComp_lineHeading("#pre-order", trig_preOrder_a, dly_preOrder);
 anim_pop("#pre-order .capsule", trig_preOrder_a, dly_preOrder * 2);
+
+anim_moveFadeY("#pre-order #physical", trig_preOrder_b, 0, 50, 0, 0.6);
+
+anim_pop("#pre-order #physical img", trig_preOrder_b, 0.15, "1, 1");
+
+animComp_textArrayAppear(
+	[
+		"#pre-order #physical h3",
+		"#pre-order #physical p",
+		"#pre-order #physical .price-tag",
+		"#pre-order #physical small",
+	],
+	trig_preOrder_b,
+	0.35,
+	0.05
+);
+
+anim_moveFadeY("#pre-order #digital", trig_preOrder_b, 0.5, 50, 0, 0.6);
+
+anim_pop("#pre-order #digital img", trig_preOrder_b, 0.65, "1, 1");
+
+animComp_textArrayAppear(
+	[
+		"#pre-order #digital h3",
+		"#pre-order #digital p",
+		"#pre-order #digital .price-tag",
+	],
+	trig_preOrder_b,
+	0.85,
+	0.05
+);
+
+// Nintendo Switch
+anim_moveFadeX(
+	"#nintendo-switch .switch-banner",
+	trig_nintendoSwitch,
+	0,
+	0,
+	0,
+	2
+);
+anim_moveFadeX("#nintendo-switch h2", trig_nintendoSwitch, 0, 0, 0, 2);
+anim_pop("#nintendo-switch .choose-system-button a", trig_nintendoSwitch, 1.4);

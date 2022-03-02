@@ -25,14 +25,19 @@ const trig_league_b = {
 	trigger: "#league",
 	start: "50% 70%",
 	toggleActions: "play none none none",
-	markers: true,
 };
 const trig_features = {
 	trigger: "#features",
 	start: "50% 80%",
 	toggleActions: "play none none none",
 };
-const trig_preOrder = {
+const trig_preOrder_a = {
+	trigger: "#pre-order",
+	start: "15% 90%",
+	toggleActions: "play none none none",
+	markers: true,
+};
+const trig_preOrder_b = {
 	trigger: "#pre-order",
 	start: "50% 80%",
 	toggleActions: "play none none none",
@@ -43,8 +48,16 @@ const dly_exposition = 0.15;
 const dly_multiplayer = 0.15;
 const dly_league = 0.15;
 const dly_features = 0.15;
+const dly_preOrder = 0.15;
+
+// Eases
+const ease_pop_button = "1.125, 1";
+const ease_pop_imgFrame = "1.125, 1";
+const ease_pop_img = "1.125, 1";
+const ease_pop_img_multiplayer = "1, 0.8";
 
 // Preset Animations
+// #region lineHeading
 const anim_lineHeading_topLine = function (hSelector, trigger, dly, delayMult) {
 	hSelector += " .line--end-left";
 	gsap.fromTo(
@@ -102,10 +115,50 @@ const anim_lineHeading_heading = function (hSelector, trigger, dly, delayMult) {
 		}
 	);
 };
+// #endregion
 const animComp_lineHeading = function (selector, trigger, dly) {
 	anim_lineHeading_topLine(selector, trigger, dly, 0);
 	anim_lineHeading_bottomLine(selector, trigger, dly, 1);
 	anim_lineHeading_heading(selector, trigger, dly, 3);
+};
+const anim_pop = function (
+	selector,
+	trigger,
+	delay,
+	easeParams = "1.125, 1",
+	duration = 0.75
+) {
+	gsap.fromTo(
+		selector,
+		{
+			scaleX: 0,
+			scaleY: 0,
+		},
+		{
+			scrollTrigger: trigger,
+			delay: delay,
+			ease: "elastic.out(" + easeParams + ")",
+			duration: duration,
+			scaleX: 1,
+			scaleY: 1,
+		}
+	);
+};
+const animComp_mediaTextImagePop = function (selector, trigger, dly) {
+	anim_pop(
+		selector + " .media-text--media .frame-container",
+		trigger,
+		dly,
+		ease_pop_imgFrame,
+		1
+	);
+	anim_pop(
+		selector + " .media-text--media img",
+		trigger,
+		dly + 0.2,
+		ease_pop_img,
+		0.8
+	);
 };
 
 gsap.to("#hero", {
@@ -113,20 +166,8 @@ gsap.to("#hero", {
 	duration: 0.4,
 });
 
-gsap.fromTo(
-	"#hero .pre-order-button a",
-	{
-		scaleX: 0,
-		scaleY: 0,
-	},
-	{
-		delay: 1.5,
-		duration: 0.75,
-		ease: "elastic.out(1.125, 1)",
-		scaleX: 1,
-		scaleY: 1,
-	}
-);
+anim_pop("#hero .pre-order-button a", null, 1.5);
+
 gsap.fromTo(
 	".hero-bg",
 	{
@@ -199,36 +240,8 @@ gsap.fromTo(
 	}
 );
 
-gsap.fromTo(
-	"#exposition .media-text--media .frame-container",
-	{
-		scaleX: 0,
-		scaleY: 0,
-	},
-	{
-		scrollTrigger: trig_exposition,
-		duration: 1,
-		ease: "elastic.out(1.125, 1)",
-		scaleX: 1,
-		scaleY: 1,
-	}
-);
+animComp_mediaTextImagePop("#exposition", trig_exposition, 0);
 
-gsap.fromTo(
-	"#exposition .media-text--media img",
-	{
-		scaleX: 0,
-		scaleY: 0,
-	},
-	{
-		scrollTrigger: trig_exposition,
-		delay: 0.2,
-		duration: 0.8,
-		ease: "elastic.out(1.125, 1)",
-		scaleX: 1,
-		scaleY: 1,
-	}
-);
 gsap.fromTo(
 	"#exposition .line--w80",
 	{
@@ -304,21 +317,30 @@ gsap.fromTo(
 		y: 0,
 	}
 );
-gsap.fromTo(
+
+anim_pop(
 	"#multiplayer .media-text--media img",
-	{
-		scaleX: 0,
-		scaleY: 0,
-	},
-	{
-		scrollTrigger: trig_multiplayer,
-		delay: dly_multiplayer * 2,
-		ease: "elastic.out(1, 0.8)",
-		duration: 0.75,
-		scaleX: 1,
-		scaleY: 1,
-	}
+	trig_multiplayer,
+	dly_multiplayer * 2,
+	ease_pop_img_multiplayer,
+	0.75
 );
+
+// gsap.fromTo(
+// 	"#multiplayer .media-text--media img",
+// 	{
+// 		scaleX: 0,
+// 		scaleY: 0,
+// 	},
+// 	{
+// 		scrollTrigger: trig_multiplayer,
+// 		delay: dly_multiplayer * 2,
+// 		ease: "elastic.out(1, 0.8)",
+// 		duration: 0.75,
+// 		scaleX: 1,
+// 		scaleY: 1,
+// 	}
+// );
 
 // League
 gsap.fromTo(
@@ -408,83 +430,10 @@ gsap.fromTo(
 		y: 0,
 	}
 );
-gsap.fromTo(
-	"#league .media-text--media .frame-container",
-	{
-		scaleX: 0,
-		scaleY: 0,
-	},
-	{
-		delay: dly_league * 3,
-		scrollTrigger: trig_league_b,
-		duration: 1,
-		ease: "elastic.out(1.125, 1)",
-		scaleX: 1,
-		scaleY: 1,
-	}
-);
 
-gsap.fromTo(
-	"#league .media-text--media img",
-	{
-		scaleX: 0,
-		scaleY: 0,
-	},
-	{
-		scrollTrigger: trig_league_b,
-		delay: dly_league * 2 + 0.2,
-		duration: 0.8,
-		ease: "elastic.out(1.125, 1)",
-		scaleX: 1,
-		scaleY: 1,
-	}
-);
+animComp_mediaTextImagePop("#league", trig_league_b, dly_league * 3);
 
 // Features
-// gsap.fromTo(
-// 	"#features .heading .line--end-left",
-// 	{
-// 		x: "40%",
-// 		opacity: 0,
-// 	},
-// 	{
-// 		scrollTrigger: trig_features,
-// 		delay: dly_features * 0,
-// 		duration: 0.5,
-// 		ease: "power2.out",
-// 		x: 0,
-// 		opacity: 1,
-// 	}
-// );
-// gsap.fromTo(
-// 	"#features .heading .line--end-right",
-// 	{
-// 		x: "-40%",
-// 		opacity: 0,
-// 	},
-// 	{
-// 		scrollTrigger: trig_features,
-// 		delay: dly_features * 1,
-// 		duration: 0.5,
-// 		ease: "power2.out",
-// 		x: 0,
-// 		opacity: 1,
-// 	}
-// );
-// gsap.fromTo(
-// 	"#features .heading h2",
-// 	{
-// 		opacity: 0,
-// 	},
-// 	{
-// 		scrollTrigger: trig_features,
-// 		delay: dly_features * 3,
-// 		duration: 0.3,
-// 		ease: "power2.out",
-// 		opacity: 1,
-// 	}
-// );
-
 animComp_lineHeading("#features", trig_features, dly_features);
 
 const bulletFrom = {
@@ -540,3 +489,6 @@ count += 0.5;
 gsap.fromTo("#features #feat-7 .bullet-line", bulletFrom, bulletTo(count));
 gsap.fromTo("#features #feat-7 span", itemFrom, itemTo(count));
 count += 0.5;
+
+// Pre Order
+animComp_lineHeading("#pre-order", trig_preOrder_a, dly_preOrder);

@@ -12,6 +12,10 @@
 			margin-top: 30px;
 		}
 
+		picture {
+			display: flex;
+		}
+
 		.trailer-link {
 			display: inline-block;
 			position: relative;
@@ -22,6 +26,8 @@
 				position: absolute;
 				bottom: 0;
 				left: 0;
+
+				font-weight: 700;
 
 				background-color: $primary-color;
 				color: white;

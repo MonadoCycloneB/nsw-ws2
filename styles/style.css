@@ -898,6 +898,12 @@
   margin-top: 30px;
 }
 
+#exposition .container-fluid picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #exposition .container-fluid .trailer-link {
   display: inline-block;
   position: relative;
@@ -909,6 +915,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  font-weight: 700;
   background-color: #005ac5;
   color: white;
   padding: 0.35rem 1rem;

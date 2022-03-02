@@ -502,6 +502,13 @@
   }
 }
 
+#hero .hero .hero-content h1 {
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
 #hero .hero .hero-content .pre-order-button {
   position: absolute;
   top: 0;

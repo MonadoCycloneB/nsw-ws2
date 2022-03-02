@@ -911,9 +911,17 @@
   left: 0;
   background-color: #005ac5;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.35rem 1rem;
   border-top-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#exposition .container-fluid .trailer-link:hover strong {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding-left: 1.75rem;
 }
 
 .media-text {

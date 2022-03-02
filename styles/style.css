@@ -905,6 +905,7 @@
 }
 
 #exposition .container-fluid .trailer-link {
+  cursor: pointer;
   display: inline-block;
   position: relative;
   overflow: hidden;

@@ -227,10 +227,14 @@ const animComp_textArrayAppear = function (
 	});
 };
 
-gsap.to("#hero", {
-	opacity: 1,
-	duration: 1.25,
-});
+gsap.fromTo(
+	"#hero",
+	{ opacity: 0 },
+	{
+		opacity: 1,
+		duration: 1.25,
+	}
+);
 
 anim_pop("#hero .pre-order-button a", null, 2);
 

@@ -23,6 +23,12 @@ const trig_league_a = {
 };
 const trig_league_b = {
 	trigger: "#league",
+	start: "50% 70%",
+	toggleActions: "play none none none",
+	markers: true,
+};
+const trig_features = {
+	trigger: "#features",
 	start: "50% 80%",
 	toggleActions: "play none none none",
 	markers: true,
@@ -32,6 +38,7 @@ const trig_league_b = {
 const dly_exposition = 0.15;
 const dly_multiplayer = 0.15;
 const dly_league = 0.15;
+const dly_features = 0.15;
 
 gsap.to("#hero", {
 	opacity: 1,
@@ -292,7 +299,7 @@ gsap.fromTo(
 gsap.fromTo(
 	"#league .line--end-left",
 	{
-		x: "100%",
+		x: "105%",
 	},
 	{
 		scrollTrigger: trig_league_b,
@@ -364,3 +371,102 @@ gsap.fromTo(
 		scaleY: 1,
 	}
 );
+
+// Features
+gsap.fromTo(
+	"#features .heading .line--end-left",
+	{
+		x: "40%",
+		opacity: 0,
+	},
+	{
+		scrollTrigger: trig_features,
+		delay: dly_features * 0,
+		duration: 0.5,
+		ease: "power2.out",
+		x: 0,
+		opacity: 1,
+	}
+);
+gsap.fromTo(
+	"#features .heading .line--end-right",
+	{
+		x: "-40%",
+		opacity: 0,
+	},
+	{
+		scrollTrigger: trig_features,
+		delay: dly_features * 1,
+		duration: 0.5,
+		ease: "power2.out",
+		x: 0,
+		opacity: 1,
+	}
+);
+gsap.fromTo(
+	"#features .heading h2",
+	{
+		opacity: 0,
+	},
+	{
+		scrollTrigger: trig_features,
+		delay: dly_features * 3,
+		duration: 0.3,
+		ease: "power2.out",
+		opacity: 1,
+	}
+);
+
+const bulletFrom = {
+	opacity: 0,
+	x: "25%",
+};
+const bulletTo = function (delayMult) {
+	return {
+		scrollTrigger: trig_features,
+		delay: dly_features * delayMult,
+		duration: 0.5,
+		ease: "power2.out",
+		opacity: 1,
+		x: 0,
+	};
+};
+const itemFrom = { opacity: 0 };
+const itemTo = function (delayMult) {
+	return {
+		scrollTrigger: trig_features,
+		delay: dly_features * delayMult,
+		duration: 0.5,
+		ease: "power2.out",
+		opacity: 1,
+	};
+};
+
+let count = 3;
+gsap.fromTo("#features #feat-1 .bullet-line", bulletFrom, bulletTo(count));
+gsap.fromTo("#features #feat-1 span", itemFrom, itemTo(count));
+count += 0.5;
+
+gsap.fromTo("#features #feat-2 .bullet-line", bulletFrom, bulletTo(count));
+gsap.fromTo("#features #feat-2 span", itemFrom, itemTo(count));
+count += 0.5;
+
+gsap.fromTo("#features #feat-3 .bullet-line", bulletFrom, bulletTo(count));
+gsap.fromTo("#features #feat-3 span", itemFrom, itemTo(count));
+count += 0.5;
+
+gsap.fromTo("#features #feat-4 .bullet-line", bulletFrom, bulletTo(count));
+gsap.fromTo("#features #feat-4 span", itemFrom, itemTo(count));
+count += 0.5;
+
+gsap.fromTo("#features #feat-5 .bullet-line", bulletFrom, bulletTo(count));
+gsap.fromTo("#features #feat-5 span", itemFrom, itemTo(count));
+count += 0.5;
+
+gsap.fromTo("#features #feat-6 .bullet-line", bulletFrom, bulletTo(count));
+gsap.fromTo("#features #feat-6 span", itemFrom, itemTo(count));
+count += 0.5;
+
+gsap.fromTo("#features #feat-7 .bullet-line", bulletFrom, bulletTo(count));
+gsap.fromTo("#features #feat-7 span", itemFrom, itemTo(count));
+count += 0.5;

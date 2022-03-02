@@ -13,7 +13,7 @@ const trig_exposition = {
 };
 const trig_multiplayer = {
 	trigger: "#multiplayer",
-	start: "center 80%",
+	start: "30% 80%",
 	toggleActions: "play none none none",
 };
 const trig_league_a = {
@@ -28,7 +28,7 @@ const trig_league_b = {
 };
 const trig_features = {
 	trigger: "#features",
-	start: "50% 80%",
+	start: "15% 80%",
 	toggleActions: "play none none none",
 };
 const trig_preOrder_a = {
@@ -38,12 +38,12 @@ const trig_preOrder_a = {
 };
 const trig_preOrder_b = {
 	trigger: "#pre-order",
-	start: "50% 80%",
+	start: "30% 80%",
 	toggleActions: "play none none none",
 };
 const trig_nintendoSwitch = {
 	trigger: "#nintendo-switch",
-	start: "50% 80%",
+	start: "20% 90%",
 	toggleActions: "play none none none",
 };
 
@@ -229,10 +229,10 @@ const animComp_textArrayAppear = function (
 
 gsap.to("#hero", {
 	opacity: 1,
-	duration: 0.4,
+	duration: 1.25,
 });
 
-anim_pop("#hero .pre-order-button a", null, 1.5);
+anim_pop("#hero .pre-order-button a", null, 2);
 
 gsap.fromTo(
 	".hero-bg",
@@ -240,7 +240,7 @@ gsap.fromTo(
 		opacity: 0,
 	},
 	{
-		delay: 0.5,
+		delay: 0.8,
 		duration: 1,
 		opacity: 1,
 	}
@@ -251,8 +251,8 @@ gsap.fromTo(
 		opacity: 0,
 	},
 	{
-		delay: 0.75,
-		duration: 0.5,
+		delay: 1.5,
+		duration: 0.15,
 		opacity: 1,
 	}
 );
@@ -263,10 +263,9 @@ anim_moveFadeY(
 	{
 		trigger: "#key-message",
 		start: "-100px 80%",
-		end: "bottom 20%",
 		toggleActions: "play none none none",
 	},
-	0,
+	0.5,
 	50,
 	0,
 	0.5
@@ -352,7 +351,7 @@ anim_moveFadeX(
 	"#league .line--color-green",
 	trig_league_a,
 	0.05,
-	"-100%",
+	"-105%",
 	1,
 	0.6
 );

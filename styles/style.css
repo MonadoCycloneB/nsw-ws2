@@ -898,6 +898,21 @@
   margin-top: 30px;
 }
 
+#exposition .container-fluid .trailer-link {
+  display: inline-block;
+  position: relative;
+}
+
+#exposition .container-fluid .trailer-link strong {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #005ac5;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .media-text {
   display: -ms-grid;
   display: grid;

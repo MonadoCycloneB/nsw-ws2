@@ -1081,6 +1081,7 @@
 }
 
 #multiplayer .media-text--media {
+  z-index: 1;
   overflow: hidden;
   padding: 0;
 }
@@ -2353,6 +2354,7 @@ section {
   }
 }
 
+html,
 body {
   margin: 0;
   overflow-x: hidden;

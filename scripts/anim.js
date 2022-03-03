@@ -495,4 +495,13 @@ anim_moveFadeX(
 	2
 );
 anim_moveFadeX("#nintendo-switch h2", trig_nintendoSwitch, 0, 0, 0, 2);
+anim_moveFadeX(
+	"#nintendo-switch .warranty-sticker",
+	trig_nintendoSwitch,
+	0.9,
+	0,
+	0,
+	0.2
+);
+
 anim_pop("#nintendo-switch .choose-system-button a", trig_nintendoSwitch, 1.4);

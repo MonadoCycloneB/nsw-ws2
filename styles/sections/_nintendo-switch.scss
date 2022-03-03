@@ -15,6 +15,27 @@
 		margin-block: 20px;
 		@include bg-nintendo();
 
+		picture {
+			position: relative;
+
+			.warranty-sticker {
+				position: absolute;
+				clip-path: circle(49.5% at 50%);
+				top: 0.5rem;
+				right: 0.5rem;
+				width: 4.5rem;
+
+				@include breakpoint(425px) {
+					width: 6rem;
+				}
+
+				@include breakpoint($breakpoint-desktop) {
+					right: -6rem;
+					width: 8rem;
+				}
+			}
+		}
+
 		h2 {
 			text-align: center;
 			font-size: 1.5rem;

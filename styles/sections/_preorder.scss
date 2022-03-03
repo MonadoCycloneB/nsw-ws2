@@ -124,6 +124,7 @@
 	.order-button {
 		margin-top: 2rem;
 		@include flexCenter();
+
 		.button {
 			@include arrowButton($primary-color, white, $filter-white);
 

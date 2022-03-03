@@ -121,4 +121,18 @@
 			}
 		}
 	}
+	.order-button {
+		margin-top: 2rem;
+		@include flexCenter();
+		.button {
+			@include arrowButton($primary-color, white, $filter-white);
+
+			margin-right: auto;
+			margin-left: auto;
+
+			@include breakpoint($breakpoint-desktop) {
+				margin-right: 0;
+			}
+		}
+	}
 }

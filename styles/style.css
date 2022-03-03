@@ -1223,7 +1223,12 @@
   text-align: center;
 }
 
-#multiplayer .media-text--text .white-block * {
+#multiplayer .media-text--text .white-block h2,
+#multiplayer .media-text--text .white-block h3,
+#multiplayer .media-text--text .white-block p,
+#multiplayer .media-text--text .white-block span,
+#multiplayer .media-text--text .white-block small,
+#multiplayer .media-text--text .white-block strong {
   margin-bottom: 1rem;
 }
 
@@ -1859,7 +1864,12 @@
   max-width: 648px;
 }
 
-#pre-order .container-fluid .versions .white-block * {
+#pre-order .container-fluid .versions .white-block h2,
+#pre-order .container-fluid .versions .white-block h3,
+#pre-order .container-fluid .versions .white-block p,
+#pre-order .container-fluid .versions .white-block span,
+#pre-order .container-fluid .versions .white-block small,
+#pre-order .container-fluid .versions .white-block strong {
   margin-bottom: 1rem;
 }
 
@@ -1930,6 +1940,98 @@
 
 #pre-order .container-fluid .versions .white-block img {
   border-radius: 10px;
+}
+
+#pre-order .order-button {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pre-order .order-button .button {
+  --arrow-margin: -2.25rem;
+  --text-pad: 2.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0.75rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-decoration: none;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#pre-order .order-button .button div {
+  background-color: #005ac5;
+  border-radius: 500px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#pre-order .order-button .button .btn-text {
+  color: white;
+  padding: 0.5rem 1.5rem;
+  padding-left: var(--text-pad);
+  font-family: "Rubik";
+  font-weight: 600;
+}
+
+#pre-order .order-button .button .btn-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: var(--arrow-margin);
+}
+
+#pre-order .order-button .button .btn-arrow img {
+  height: 1rem;
+  width: 1rem;
+  -webkit-filter: invert(100%) sepia(1%) saturate(622%) hue-rotate(157deg) brightness(110%) contrast(97%);
+          filter: invert(100%) sepia(1%) saturate(622%) hue-rotate(157deg) brightness(110%) contrast(97%);
+}
+
+#pre-order .order-button .button:hover {
+  --text-pad: 1.5rem;
+  --arrow-margin: 0.25rem;
+}
+
+#pre-order .order-button .button:hover a {
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  #pre-order .order-button .button {
+    margin-right: 0;
+  }
 }
 
 .media-text {

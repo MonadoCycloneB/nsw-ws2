@@ -7,9 +7,15 @@
 	padding: 3rem 1.8rem;
 	border-radius: $borderRadius;
 
-	* {
+	h2,
+	h3,
+	p,
+	span,
+	small,
+	strong {
 		margin-bottom: 1rem;
 	}
+
 	h2 {
 		font-size: 1.5rem;
 	}

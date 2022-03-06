@@ -13,34 +13,36 @@ const trig_exposition = {
 };
 const trig_multiplayer = {
 	trigger: "#multiplayer",
-	start: "30% 80%",
+	start: "10% 80%",
 	toggleActions: "play none none none",
 };
 const trig_league_a = {
 	trigger: "#league",
-	start: "30% 80%",
+	start: "15% 80%",
 	toggleActions: "play none none none",
 };
 const trig_league_b = {
 	trigger: "#league",
-	start: "50% 70%",
+	start: "30% 70%",
 	toggleActions: "play none none none",
 };
 const trig_features = {
 	trigger: "#features",
-	start: "15% 80%",
+	start: "0% 80%",
 	toggleActions: "play none none none",
+	markers: true,
 };
 const trig_preOrder_a = {
 	trigger: "#pre-order",
 	start: "15% 90%",
 	toggleActions: "play none none none",
 };
-const trig_preOrder_b = {
-	trigger: "#pre-order",
-	start: "30% 80%",
-	toggleActions: "play none none none",
-};
+const trig_preOrder_b = trig_preOrder_a;
+// const trig_preOrder_b = {
+// 	trigger: "#pre-order",
+// 	start: "30% 80%",
+// 	toggleActions: "play none none none",
+// };
 const trig_nintendoSwitch = {
 	trigger: "#nintendo-switch",
 	start: "20% 90%",
@@ -412,7 +414,7 @@ const itemTo = function (delayMult) {
 	};
 };
 
-let count = 7;
+let count = 4;
 gsap.fromTo("#features #feat-1 .bullet-line", bulletFrom, bulletTo(count));
 gsap.fromTo("#features #feat-1 span", itemFrom, itemTo(count));
 count += 0.5;
@@ -454,9 +456,18 @@ anim_moveFadeX(
 animComp_lineHeading("#pre-order", trig_preOrder_a, dly_preOrder);
 anim_pop("#pre-order .capsule", trig_preOrder_a, dly_preOrder * 2);
 
-anim_moveFadeY("#pre-order #physical", trig_preOrder_b, 0, 50, 0, 0.6);
+const verDelay = 0.75;
 
-anim_pop("#pre-order #physical img", trig_preOrder_b, 0.15, "1, 1");
+anim_moveFadeY(
+	"#pre-order #physical",
+	trig_preOrder_b,
+	verDelay + 0,
+	50,
+	0,
+	0.6
+);
+
+anim_pop("#pre-order #physical img", trig_preOrder_b, verDelay + 0.15, "1, 1");
 
 animComp_textArrayAppear(
 	[
@@ -467,7 +478,7 @@ animComp_textArrayAppear(
 		"#pre-order #physical .order-button",
 	],
 	trig_preOrder_b,
-	0.35,
+	verDelay + 0.35,
 	0.05
 );
 

@@ -455,7 +455,7 @@ anim_moveFadeX(
 animComp_lineHeading("#pre-order", trig_preOrder_a, dly_preOrder);
 anim_pop("#pre-order .capsule", trig_preOrder_a, dly_preOrder * 2);
 
-const verDelay = 0.75;
+const verDelay = 0.65;
 
 anim_moveFadeY(
 	"#pre-order #physical",
@@ -481,9 +481,16 @@ animComp_textArrayAppear(
 	0.05
 );
 
-anim_moveFadeY("#pre-order #digital", trig_preOrder_b, 0.5, 50, 0, 0.6);
+anim_moveFadeY(
+	"#pre-order #digital",
+	trig_preOrder_b,
+	verDelay + 0.5,
+	50,
+	0,
+	0.6
+);
 
-anim_pop("#pre-order #digital img", trig_preOrder_b, 0.65, "1, 1");
+anim_pop("#pre-order #digital img", trig_preOrder_b, verDelay + 0.65, "1, 1");
 
 animComp_textArrayAppear(
 	[
@@ -493,7 +500,7 @@ animComp_textArrayAppear(
 		"#pre-order #digital .order-button",
 	],
 	trig_preOrder_b,
-	0.85,
+	verDelay + 0.85,
 	0.05
 );
 

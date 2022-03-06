@@ -30,7 +30,6 @@ const trig_features = {
 	trigger: "#features",
 	start: "0% 80%",
 	toggleActions: "play none none none",
-	markers: true,
 };
 const trig_preOrder_a = {
 	trigger: "#pre-order",

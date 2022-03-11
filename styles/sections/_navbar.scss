@@ -1,0 +1,30 @@
+@import "../util";
+@import "../blocks";
+
+nav {
+	background-color: #e60f17;
+	$border: #606060;
+	border-bottom: $border solid 1rem;
+
+	display: flex;
+
+	.nav-logo {
+		display: flex;
+		flex-direction: row;
+		text-decoration: none;
+		align-items: center;
+	}
+
+	img {
+		margin-right: 0.5rem;
+		max-width: 8rem;
+	}
+
+	span {
+		font-size: 0.675rem;
+		color: white;
+		border-right: 1px white solid;
+		padding-right: 0.5rem;
+		margin-block: 0.75rem;
+	}
+}

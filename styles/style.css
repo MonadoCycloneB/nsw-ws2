@@ -520,7 +520,13 @@ nav .nav-logo {
 
 nav img {
   margin-right: 0.5rem;
-  max-width: 8rem;
+  max-width: 10rem;
+}
+
+@media (min-width: 768px) {
+  nav img {
+    max-width: 8rem;
+  }
 }
 
 nav span {

@@ -17,7 +17,11 @@ nav {
 
 	img {
 		margin-right: 0.5rem;
-		max-width: 8rem;
+		max-width: 10rem;
+
+		@include breakpoint($breakpoint-tablet) {
+			max-width: 8rem;
+		}
 	}
 
 	span {

@@ -43,14 +43,6 @@
 			margin-inline: auto;
 			position: relative;
 
-			// H1
-			h1 {
-				clip: rect(0, 0, 0, 0);
-				width: 1px;
-				position: absolute;
-				overflow: hidden;
-			}
-
 			// Release Date
 			.release-date {
 				font-size: 0.8rem;

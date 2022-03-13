@@ -264,7 +264,7 @@ gsap.fromTo(
 
 // Key Messaging
 anim_moveFadeY(
-	"#key-message h2",
+	"#key-message .heading-block",
 	{
 		trigger: "#key-message",
 		start: "-100px 80%",
